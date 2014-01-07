@@ -10,7 +10,12 @@ info = dict()
 #info['school'] = input('What school do you go to?')
 info['grades'] = []
 for i in range(0,1000000):
-    grade = input("Write you grades you have and enter '#' with the quoets when you are finished, please use only numbers.")
+    if i == 0:
+        grade = input("""Write you grades you have and enter '#' with the quoets when you are finished,
+please use only numbers and have them be between 0 and 4.
+    """)
+    else:
+        grade = input('')
     if grade == '#':
         break
     else:
