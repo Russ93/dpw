@@ -15,4 +15,9 @@ for i in range(0,1000000):
         break
     else:
         info['grades'].append(grade)
+info['best'] = 0
+for num in info['grades']:
+    if num > info['best']:
+        info['best'] = num
+print info['best']
 """'Hi my name is '+info['name']+' and I have gone through '+info['dur']+' year(s) at '+info['school']+'. I have tried to get mostly '+info['grades']+"'s and my GPA is a "info['grades']'. I have tried my hardest in my classes and my grades clearly show it.'"""
