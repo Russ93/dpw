@@ -43,6 +43,20 @@ elif info['best']==1:
     info['let']='D'
 else:
     info['let']='F'
+    
+#Adding up The GPA
+info['gpa'] = 0
+
+amt = 0
+ttl = 0
+
+for a in info['grades']:
+    ttl = ttl + a
+    amt = amt + 1
+
+info['gpa'] = ttl/amt
+
+print info['gpa']
 
 # The Story
-"""'Hi my name is '+info['name']+' and I have gone through '+info['dur']+' year(s) at '+info['school']+'. I have tried to get mostly '+info['grades']+"'s and my GPA is a "info['grades']'. I have tried my hardest in my classes and my grades clearly show it.'"""
+#Hi my name is {info['name']}+ and I have gone through {info['dur']} year(s) at {info['school']}. I have tried to get mostly {info['let']}'s and my GPA is a {info['gpa']}. I have tried my hardest in my classes and my grades clearly show it.
