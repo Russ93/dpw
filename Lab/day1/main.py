@@ -7,9 +7,9 @@ DPW
 info = dict()
 
 info['name'] = input('Please print you name in quotes.  ')
-#info['school'] = input('What school have you previously gone to? in quotes as well. ')
-#info['dur'] = input('How many years have you attended this school? NOT IN QUOTES.   ')
-#info['grades'] = []
+info['school'] = input('What school have you previously gone to? in quotes as well. ')
+info['dur'] = input('How many years have you attended this school? NOT IN QUOTES.   ')
+info['grades'] = []
 
 # The asking of what your grades are
 for i in range(0,1000000):
@@ -57,8 +57,5 @@ for a in info['grades']:
 info['gpa'] = ttl/amt
 
 #-------------------- The Story --------------------#
-#story = """Hi my name is {info['name']} and I have gone through {info['dur']} year(s) at {info['school']}. I have tried to get mostly {info['let']}'s and my GPA is a {info['gpa']}. I have tried my hardest in my classes and my grades clearly show it."""
-print info['name']
-story = """Hi my name is {info['name']}"""
-storyForm = story.format(**locals())
-print storyForm
+story = 'Hi my name is '+info['name']+' and I have gone through '+str(info['dur'])+' year(s) at '+info['school']+'. I have tried to get mostly '+info['let']+"'s and my GPA is a "+str(info['gpa'])+'. I have tried my hardest in my classes and my grades clearly show it.'
+print story
