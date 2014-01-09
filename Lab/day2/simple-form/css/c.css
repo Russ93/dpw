@@ -70,3 +70,29 @@ nav li:nth-child(even){
 	cursor: pointer;
 	padding: 5px;
 }
+/*------------------------- CTA -------------------------*/
+#cta{
+	width: 50%;
+	margin: 20px 25%;
+	text-align: center;
+}
+#cta span{
+	color: #999;
+	font-size: 1em;
+	margin: 75px 0 5px 0;
+	display: block;
+	float: left;
+}
+input{
+	width: calc(100% - 30px);
+	padding: 1em;
+	margin-bottom: 1em;
+	border-radius: 5px;
+	border: #ccc solid 2px;
+	background: #fff;
+	clear: both;
+}
+input:focus{
+	outline: 0;
+	border: #4D9379 solid 2px;
+}
