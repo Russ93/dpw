@@ -20,11 +20,11 @@ class Page():
 			</ul>
 		</nav>
 		<section id="cta">
+		'''
+		self.__regis = '''
 			<h1>Start Remembering</h1>
 			<p>This app will make modern note taking obsolete and make modern life a bit more manageable by  allowing to take note of everything and never lose information</p>
 			<span>Create a free account</span>
-		'''
-		self.__form = '''
 			<form method='GET'>
 				<input type='text' name='user' placeholder="Enter Your Desired Username" />
 				<input name='pass' type='password' placeholder="Enter Your Password" />
@@ -48,8 +48,8 @@ class Page():
 	def body(self):
 		return self.__body
 
-	def form(self):
-		return self.__form
+	def regis(self):
+		return self.__regis
 
 	def foot(self):
 		return self.__foot
