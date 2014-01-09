@@ -96,3 +96,24 @@ input:focus{
 	outline: 0;
 	border: #4D9379 solid 2px;
 }
+/*------------------------- Submitted -------------------------*/
+section ul{
+	text-align: left;
+}
+section ul li{
+	list-style: none;
+	display: inline;
+	text-align: left;
+	overflow: hidden;
+	display: block;
+	clear: both;
+	width: 100%;
+}
+section ul li > h2,p{
+	float: left;
+}
+section ul li p{
+	font-size: 1.75em;
+	line-height: 1.25em;
+	margin-left: 15px;
+}
