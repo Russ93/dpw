@@ -15,7 +15,7 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(page.head(title))
         self.response.write(page.body())
         if self.request.GET:
-
+        	self.response.write(page.returnedSub(self.request.GET))
         else:
         	self.response.write(page.regis())
         self.response.write(page.foot())
