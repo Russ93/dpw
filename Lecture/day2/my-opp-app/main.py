@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+#
+# Russell Schlup
+# DPW
+# 1/8/14
+import webapp2
+
+class MainHandler(webapp2.RequestHandler):
+	def get(self):
+		#self.response.write('Hello world!')
+		#calling the method "click".. which returns fills lbl
+		button = Button()
+		#printing out lbl
+		lbl = button.label
+		self.response.write(button.label)
+
+class Button():
+	
+	def __init__(self):
+		self.label = 'Contact us'
+	
+	@property #decorator
+	def label(self):
+		return self.__label
+		
+	@label.setter #setter decorator
+	def label(self, l):
+		self.__label = l
+	
+	def label(self):
+		return self.label
+	
+
+
+app = webapp2.WSGIApplication([
+	('/', MainHandler)
+], debug=True)

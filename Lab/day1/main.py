@@ -57,5 +57,6 @@ for a in info['grades']:
 info['gpa'] = ttl/amt
 
 #-------------------- The Story --------------------#
-story = 'Hi my name is '+info['name']+' and I have gone through '+str(info['dur'])+' year(s) at '+info['school']+'. I have tried to get mostly '+info['let']+"'s and my GPA is a "+str(info['gpa'])+'. I have tried my hardest in my classes and my grades clearly show it.'
+story = """Hi my name is {info[name]} and I have gone through {info[dur]} year(s) at {info[school]}. I have tried to get mostly {info[let]}'s and my GPA is a {info[gpa]}. I have tried my hardest in my classes and my grades clearly show it."""
+story = story.format(**locals())
 print story
