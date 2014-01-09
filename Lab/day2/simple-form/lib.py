@@ -26,12 +26,12 @@ class Page():
 			<p>This app will make modern note taking obsolete and make modern life a bit more manageable by  allowing to take note of everything and never lose information</p>
 			<span>Create a free account</span>
 			<form method='GET'>
-				<input type='text' name='user' placeholder="Enter Your Desired Username" />
-				<input name='pass' type='password' placeholder="Enter Your Password" />
-				<input type='text' name='fName' placeholder="Enter Your First Name" />
-				<input type='text' name='lName' placeholder="Enter Your Last Name" />
-				<input type='text' name='email' placeholder="Enter Your Email" />
-				<button>Sign Up</button>
+				<label>username</label><input type='text' name='user' placeholder="Enter Your Desired Username" />
+				<label>password</label><input name='pass' type='password' placeholder="Enter Your Password" />
+				<label>first name</label><input type='text' name='fName' placeholder="Enter Your First Name" />
+				<label>last name</label><input type='text' name='lName' placeholder="Enter Your Last Name" />
+				<label>email</label><input type='text' name='email' placeholder="Enter Your Email" />
+				<label></label><button>Sign Up</button>
 			</form>
 			'''
 

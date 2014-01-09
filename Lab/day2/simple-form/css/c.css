@@ -79,7 +79,7 @@ nav li:nth-child(even){
 #cta span{
 	color: #999;
 	font-size: 1em;
-	margin: 75px 0 5px 0;
+	margin: 50px 0 5px 0;
 	display: block;
 	float: left;
 }
@@ -95,6 +95,9 @@ input{
 input:focus{
 	outline: 0;
 	border: #4D9379 solid 2px;
+}
+label{
+	display: none;
 }
 /*------------------------- Submitted -------------------------*/
 section ul{
