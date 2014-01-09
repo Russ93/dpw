@@ -6,6 +6,8 @@ class Page():
 <html>
 	<head>
 		<title>{title}</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300|Josefin+Slab:300' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' href='css/n.css' />
 		<link rel='stylesheet' href='css/c.css' />
 	</head>
 	<body>
@@ -13,7 +15,7 @@ class Page():
 		self.__body = '''
 		<nav>
 			<ul>
-				<li><img src="i/l.png" id="logo"/></li>
+				<li><img src="css/l.png" id="logo"/></li>
 				<li>Login</li>
 			</ul>
 		</nav>
@@ -24,11 +26,11 @@ class Page():
 		'''
 		self.__form = '''
 			<form method='GET'>
-				<label>Username</label><input type='text' name='user' placeholder="Enter Your Desired Username" />
-				<label>Password</label><input type='text' name='pass' placeholder="Enter Your Password" />
-				<label>First Name</label><input type='text' name='fName' placeholder="Enter Your First Name" />
-				<label>Last Name</label><input type='text' name='lName' placeholder="Enter Your Last Name" />
-				<label>Email</label><input type='text' name='email' placeholder="Enter Your Email" />
+				<input type='text' name='user' placeholder="Enter Your Desired Username" />
+				<input name='pass' type='password' placeholder="Enter Your Password" />
+				<input type='text' name='fName' placeholder="Enter Your First Name" />
+				<input type='text' name='lName' placeholder="Enter Your Last Name" />
+				<input type='text' name='email' placeholder="Enter Your Email" />
 				<button>Sign Up</button>
 			</form>
 			'''
