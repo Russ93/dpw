@@ -12,6 +12,7 @@ class MainHandler(webapp2.RequestHandler):
     	page = Page() #creates an instance of the imported page
 
     	title = 'Russell'
+        self.response.write(page.head(title))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
