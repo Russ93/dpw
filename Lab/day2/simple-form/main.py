@@ -14,6 +14,8 @@ class MainHandler(webapp2.RequestHandler):
     	title = 'Russell'
         self.response.write(page.head(title))
 
+        self.response.write(page.foot())
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)

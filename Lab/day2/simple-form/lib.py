@@ -11,7 +11,15 @@ class Page():
 	<body>
 			'''
 
+		self.__foot= '''
+		</section>
+	</body>
+</html>
+			'''
 #-------------------- html returns --------------------#
 	def head(self, title):
 		header = self.__header.format(**locals())
 		return header
+
+	def foot(self):
+		return self.__foot
