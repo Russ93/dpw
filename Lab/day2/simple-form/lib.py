@@ -21,6 +21,25 @@ class Page():
 		</nav>
 		<section id="cta">
 		'''
+		self.__sub = '''
+		<h1>Congrtulations {submit[fName]},{submit[lName]}</h1>
+		<p>You have signed up for Written online note taker sadly this site isn't completely set up ,but thank you for showing your appreciation by signing up early, we greatly appreciate it!</p>
+		<strong>Below is the information you will use to sign in with.</strong>
+		<ul>
+			<li>
+				<h2>Email:</h2>
+				<p>{submit[email]}</p>
+			</li>
+			<li>
+				<h2>Username:</h2>
+				<p>{submit[user]}</p>
+			</li>
+			<li>
+				<h2>Password:</h2>
+				<p>{submit[pass]}</p>
+			</li>
+		</ul>
+		'''
 		self.__regis = '''
 			<h1>Start Remembering</h1>
 			<p>This app will make modern note taking obsolete and make modern life a bit more manageable by  allowing to take note of everything and never lose information</p>
@@ -53,3 +72,6 @@ class Page():
 
 	def foot(self):
 		return self.__foot
+	def returnedSub(self, submit):
+		returned = self.__sub.format(**locals())
+		return returned
