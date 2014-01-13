@@ -22,7 +22,7 @@ class Page():
 		<section id="cta">
 		'''
 		self.__pre = '''
-		<h1>Congrtulations {submit[first]},{submit[last]}</h1>
+		<h1>Congratulations</h1>
 		<p>You have signed up for Written online note taker sadly this site isn't completely set up ,but thank you for showing your appreciation by signing up early, we greatly appreciate it!</p>
 		<strong>Below is the information you will use to sign in with.</strong>
 		<ul>'''
@@ -31,10 +31,10 @@ class Page():
 			<p>This app will make modern note taking obsolete and make modern life a bit more manageable by  allowing to take note of everything and never lose information</p>
 			<span>Create a free account</span>
 			<form method='GET'>
-				<label>username</label><input type='text' name='username' placeholder="Enter Your Desired Username" />
-				<label>password</label><input name='pass' type='password' placeholder="Enter Your Password" />
 				<label>first name</label><input type='text' name='first' placeholder="Enter Your First Name" />
 				<label>last name</label><input type='text' name='last' placeholder="Enter Your Last Name" />
+				<label>username</label><input type='text' name='username' placeholder="Enter Your Desired Username" />
+				<label>password</label><input name='pass' type='password' placeholder="Enter Your Password" />
 				<label>email</label><input type='text' name='email' placeholder="Enter Your Email" />
 				<label></label><button>Sign Up</button>
 			</form>

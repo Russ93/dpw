@@ -12,6 +12,7 @@ h1, h2, h3 , h4, h5, h6, span{
 	font-family: 'Josefin Slab', "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: 400;
 	color: #4D9379;
+	text-transform: capitalize;
 }
 h1{
 	font-size: 3em
