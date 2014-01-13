@@ -21,25 +21,11 @@ class Page():
 		</nav>
 		<section id="cta">
 		'''
-		self.__sub = '''
+		self.__pre = '''
 		<h1>Congrtulations {submit[fName]},{submit[lName]}</h1>
 		<p>You have signed up for Written online note taker sadly this site isn't completely set up ,but thank you for showing your appreciation by signing up early, we greatly appreciate it!</p>
 		<strong>Below is the information you will use to sign in with.</strong>
-		<ul>
-			<li>
-				<h2>Email:</h2>
-				<p>{submit[email]}</p>
-			</li>
-			<li>
-				<h2>Username:</h2>
-				<p>{submit[user]}</p>
-			</li>
-			<li>
-				<h2>Password:</h2>
-				<p>{submit[pass]}</p>
-			</li>
-		</ul>
-		'''
+		<ul>'''
 		self.__regis = '''
 			<h1>Start Remembering</h1>
 			<p>This app will make modern note taking obsolete and make modern life a bit more manageable by  allowing to take note of everything and never lose information</p>
@@ -73,5 +59,20 @@ class Page():
 	def foot(self):
 		return self.__foot
 	def returnedSub(self, submit):
-		returned = self.__sub.format(**locals())
+		returned = self.__pre
+		#----- prefix the html -----#
+		for key in submit:
+#		----- for loops thorugh the object returned -----		#
+			pull = submit[key]
+			#----- pulls the item out of the object with the current key
+			returned = returned+'''
+            <li>
+				<h2>'''+key+''':</h2>
+				<p>'''+pull+'''</p>
+			</li>'''
+			#----- make the key into an H2 and the pulled item into a paragraph
+		returned = returned+'''
+		</ul>'''
+		#----- finishes off the ul
+		returned = returned.format(**locals())
 		return returned
