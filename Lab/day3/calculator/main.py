@@ -9,9 +9,21 @@ class MainHandler(webapp2.RequestHandler):
 		page = Page()
 
 		self.response.write(page.head())
+		world = Region()
+		world.name = 'Earth'
+		world.population = 7162119434
+		world.area = 136806988
+
+		areas = [world]
+
+		if self.request.GET:
+			button = int(self.request.GET['button'])
+			self.response.write(self.html(areas[button]))
 
 		self.response.write(page.form())
 		self.response.write(page.foot())
+		stranged = stranged.format(**locals())
+		return stranged
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
