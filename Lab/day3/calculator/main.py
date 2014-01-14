@@ -29,12 +29,17 @@ class MainHandler(webapp2.RequestHandler):
 		latinAmerica.population = 616644503
 		latinAmerica.area = 20546598
 
+		northAmerica = Region()
+		northAmerica.name = 'Northern America'
+		northAmerica.population = 355360791
+		northAmerica.area = 21775893
+
 		world = Region()
 		world.name = 'Earth'
 		world.population = 7162119434
 		world.area = 136806988
 
-		areas = [world,asia,africa,europe,latinAmerica]
+		areas = [world,asia,africa,europe,latinAmerica,northAmerica]
 
 		if self.request.GET:
 			button = int(self.request.GET['button'])
