@@ -52,6 +52,30 @@ class MainHandler(webapp2.RequestHandler):
 
 		self.response.write(page.form())
 		self.response.write(page.foot())
+	def html(self,obj):
+		percent = "%.2f" % float(float(obj.population*100)/float(obj.world))
+		dens = "%.2f" % float(float(obj.population)/float(obj.area))
+		stranged = '''
+		<h1>{obj.name}</h1>
+		<ul>
+			<li>
+				<h3>2013 Population</h3>
+				<p>{obj.population}</p>
+			</li>
+			<li>
+				<h3>Percent of World Pop.</h3>
+				<p>{percent}%</p>
+			</li>
+			<li>
+				<h3>Area (km 2)</h3>
+				<p>{obj.area}</p>
+			</li>
+			<li>
+				<h3>Density (Population/km 2)</h3>
+				<p>{dens}</p>
+			</li>
+		</ul>
+		'''
 		stranged = stranged.format(**locals())
 		return stranged
 app = webapp2.WSGIApplication([
