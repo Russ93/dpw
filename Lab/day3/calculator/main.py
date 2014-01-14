@@ -53,8 +53,8 @@ class MainHandler(webapp2.RequestHandler):
 		self.response.write(page.form())
 		self.response.write(page.foot())
 	def html(self,obj):
-		percent =obj.population*100/obj.world
-		dens =obj.population/obj.area
+		percent = "%.2f" % float(float(obj.population*100)/float(obj.world))
+		dens = "%.2f" % float(float(obj.population)/float(obj.area))
 		stranged = '''
 		<h1>{obj.name}</h1>
 		<ul>
