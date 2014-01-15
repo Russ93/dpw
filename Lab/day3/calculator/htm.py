@@ -1,6 +1,7 @@
 class Page():
 #-------------------- initializer --------------------#
 	def __init__(self):
+		#-------------------- Head --------------------#		
 		self.__header = '''
 <!DOCTYPE>
 <html>
@@ -12,6 +13,7 @@ class Page():
 	<body>
 		<div id="container">
 			'''
+		#-------------------- Buttons --------------------#
 		self.__form='''
 	 		<form>
 				<input type='text' name='button' value='1' /><button>Asia</button>
@@ -35,12 +37,13 @@ class Page():
 				<input type="text" name="button" value="0" /><button>World</button>
 			</form>
 			'''
+		#-------------------- Closers --------------------#
 		self.__foot= '''
 		</div>
 	</body>
 </html>
 			'''
-
+#-------------------- Returners --------------------#
 	def head(self):
 		return self.__header
 
