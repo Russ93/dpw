@@ -87,11 +87,11 @@ class MainHandler(webapp2.RequestHandler):
 				<p>{percent}%</p>
 			</li>
 			<li>
-				<h3>Area (km 2)</h3>
+				<h3>Area (km&sup2;)</h3>
 				<p>{obj.area}</p>
 			</li>
 			<li>
-				<h3>Density (Population/km 2)</h3>
+				<h3>Density (Population/km&sup2;)</h3>
 				<p>{dens}</p>
 			</li>
 		</ul>
