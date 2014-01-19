@@ -68,3 +68,15 @@ class Page():
 		</div>
 	</body>
 </html>'''
+#-------------------- Returners --------------------#
+	def head(self):
+		return self.__header
+
+	def form(self):
+		return self.__form
+
+	def tmp(self,obj):
+		tmp = self.__tmp.format(**locals())
+		return tmp
+	def foot(self):
+		return self.__foot
