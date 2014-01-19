@@ -21,7 +21,48 @@ class Page():
 				<a href='/?animal=3'><button>Arctic Wolf</button></a>
 				<a href='/?animal=4'><button>Arctic Hare</button></a>
 			</nav>'''
-
+		self.__tmp='''
+			<h1>{obj.name}</h1>
+			<ul>
+				<li>
+					<h3>Phylum:</h3>
+					<p>{obj.phy}</p>
+				</li>
+				<li>
+					<h3>Class:</h3>
+					<p>{obj.classs}</p>
+				</li>
+				<li>
+					<h3>Order:</h3>
+					<p>{obj.order}</p>
+				</li>
+				<li>
+					<h3>Family:</h3>
+					<p>{obj.fam}</p>
+				</li>
+				<li>
+					<h3>Genus:</h3>
+					<p>{obj.gen}</p>
+				</li>
+				<li>
+					<h3>Average Lifespan:</h3>
+					<p>{obj.avg}</p>
+				</li>
+				<li>
+					<h3>Habitat:</h3>
+					<p>{obj.hab}</p>
+				</li>
+				<li>
+					<h3>Geolocation:</h3>
+					<p>{obj.geo}</p>
+				</li>
+				<li>
+					<h3>What do they say?</h3>
+					<p>{obj.say}</p>
+				</li>
+			</ul>
+			<img src='{obj.img}' width='300px'/>
+		'''
 		#-------------------- Closers --------------------#
 		self.__foot= '''
 		</div>
