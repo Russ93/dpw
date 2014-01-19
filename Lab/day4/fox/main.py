@@ -6,7 +6,10 @@ from htm import Page
 
 class MainHandler(webapp2.RequestHandler):
 	def get(self):
-		self.response.write('Hello World')
+		page = Page()
+		self.response.write(page.head())
+		self.response.write(page.form())
+		self.response.write(page.foot())
 
 app = webapp2.WSGIApplication([
 	('/', MainHandler)
