@@ -23,6 +23,8 @@ class MainHandler(webapp2.RequestHandler):
 		bunny = Lepus()
 		bunny.name = 'Arctic Hare'
 
+		animals = [seal,fox,ferret,wolf,bunny]
+		
 		self.response.write(page.head())
 		if self.request.GET:
 			a = int(self.request.GET['animal'])
