@@ -21,3 +21,22 @@ h1{
 p{
 	font-size: 1em
 }
+ul{
+	width: 500px;
+	float: left;
+	overflow: hidden;
+}
+ul li{
+	width: 50%;
+	float: left;
+	list-style: none;
+}
+a{
+	float: left;
+}
+img{
+	float: right;
+	padding: 5px;
+	border: 2px solid;
+	border-color: #12ab8d;
+}
