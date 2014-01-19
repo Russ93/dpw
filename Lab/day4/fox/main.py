@@ -20,6 +20,9 @@ class MainHandler(webapp2.RequestHandler):
 		wolf = Canis()
 		wolf.name = 'Arctic Wolf'
 
+		bunny = Lepus()
+		bunny.name = 'Arctic Hare'
+
 		self.response.write(page.head())
 		if self.request.GET:
 			a = int(self.request.GET['animal'])
