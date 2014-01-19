@@ -8,6 +8,10 @@ class MainHandler(webapp2.RequestHandler):
 	def get(self):
 		page = Page()
 
+		seal = Pagophilus()
+		seal.name = 'Harp Seal'
+
+
 		self.response.write(page.head())
 		if self.request.GET:
 			a = int(self.request.GET['animal'])
