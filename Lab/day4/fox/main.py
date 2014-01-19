@@ -86,3 +86,24 @@ class Pagophilus(Phocidae):
 	@property
 	def gen(self):
 		return self._genus
+
+#----- Fox -----#
+class Canidae(Carnivora):
+	def __init__(self):
+		Carnivora.__init__(self)
+		self._fam = 'Canidae'
+	@property
+	def fam(self):
+		return self._fam
+class Vulpes(Canidae):
+	def __init__(self):
+		Canidae.__init__(self)
+		self._say = 'Ya cha cha cha cha cha chow'
+		self._genus = 'Vulpes'
+		self._avg = '16.3 years'
+		self._hab = 'tundra'
+		self._geo = 'polar'
+		self._img = 'http://www.animalhdwallpapers.com/wp-content/uploads/wallpapers/Foxes/Arctic-Fox-in-Snow-Wallpaper.jpg'
+	@property
+	def gen(self):
+		return self._genus
