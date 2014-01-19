@@ -17,6 +17,9 @@ class MainHandler(webapp2.RequestHandler):
 		ferret = Mustela()
 		ferret.name = 'Arctic Ermine'
 
+		wolf = Canis()
+		wolf.name = 'Arctic Wolf'
+
 		self.response.write(page.head())
 		if self.request.GET:
 			a = int(self.request.GET['animal'])
