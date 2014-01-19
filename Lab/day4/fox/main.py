@@ -65,3 +65,24 @@ class Carnivora(Mammalia):
 	@property
 	def order(self):
 		return self._order
+
+#----- Seal -----#
+class Phocidae(Carnivora):
+	def __init__(self):
+		Carnivora.__init__(self)
+		self._fam = 'Phocidae'
+	@property
+	def fam(self):
+		return self._fam
+class Pagophilus(Phocidae):
+	def __init__(self):
+		Phocidae.__init__(self)
+		self._say = 'ARR ARR ARR'
+		self._genus = 'Pagophilus'
+		self._avg = '20 to 35 years'
+		self._hab = 'saltwater or marine'
+		self._geo = 'polar'
+		self._img = 'http://www.scenicreflections.com/files/Cute_Harp_Seal_Wallpaper_ymwg1.jpg'
+	@property
+	def gen(self):
+		return self._genus
