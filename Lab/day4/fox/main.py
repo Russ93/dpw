@@ -40,3 +40,11 @@ class Chordata(object):
 	@property
 	def say(self):
 		return self._say
+
+class Mammalia(Chordata):
+	def __init__(self):
+		Chordata.__init__(self)
+		self._class = 'Mammalia'
+	@property
+	def classs(self):
+		return self._class
