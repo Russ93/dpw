@@ -40,3 +40,26 @@ img{
 	border: 2px solid;
 	border-color: #12ab8d;
 }
+button, input[type="button"], input[type="submit"], input[type="reset"]{
+	position: relative;
+	vertical-align: top;
+	padding: 15px 20px;
+	font-size: .625em;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	background: #1abc9c;
+	border: 0;
+	border-bottom: 2px solid #12ab8d;
+	cursor: pointer;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active{
+	top: 1px;
+	outline: none;
+	 -moz-box-shadow: none !important;
+	 -webkit-box-shadow: none !important;
+	 box-shadow: none !important;
+}
