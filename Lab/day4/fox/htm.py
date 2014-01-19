@@ -12,3 +12,8 @@ class Page():
 	</head>
 	<body>
 		<div id="container">'''
+		#-------------------- Closers --------------------#
+		self.__foot= '''
+		</div>
+	</body>
+</html>'''
