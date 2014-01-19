@@ -11,6 +11,8 @@ class MainHandler(webapp2.RequestHandler):
 		seal = Pagophilus()
 		seal.name = 'Harp Seal'
 
+		fox = Vulpes()
+		fox.name = 'Arctic Fox'
 
 		self.response.write(page.head())
 		if self.request.GET:
