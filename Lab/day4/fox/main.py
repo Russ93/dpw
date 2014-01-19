@@ -56,3 +56,12 @@ class Lagomorpha(Mammalia):
 	@property
 	def order(self):
 		return self._order
+
+#----- Carnivoures -----#
+class Carnivora(Mammalia):
+	def __init__(self):
+		Mammalia.__init__(self)
+		self._order = 'Carnivora'
+	@property
+	def order(self):
+		return self._order
