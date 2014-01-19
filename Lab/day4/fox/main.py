@@ -107,3 +107,24 @@ class Vulpes(Canidae):
 	@property
 	def gen(self):
 		return self._genus
+
+#----- Ermine (ferret) -----#
+class Mustelidae(Carnivora):
+	def __init__(self):
+		Carnivora.__init__(self)
+		self._fam = 'Mustelidae'
+	@property
+	def fam(self):
+		return self._fam
+class Mustela(Mustelidae):
+	def __init__(self):
+		Mustelidae.__init__(self)
+		self._say = 'aaahh eekk eekk'
+		self._genus = 'Mustela'
+		self._avg = '12.5 (high) years'
+		self._hab = 'tundra'
+		self._geo = 'polar'
+		self._img = 'http://media.tumblr.com/tumblr_m5vth5mrY21ros5rk.png'
+	@property
+	def gen(self):
+		return self._genus
