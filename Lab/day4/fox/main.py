@@ -48,3 +48,11 @@ class Mammalia(Chordata):
 	@property
 	def classs(self):
 		return self._class
+#----- Herbavoures -----#
+class Lagomorpha(Mammalia):
+	def __init__(self):
+		Mammalia.__init__(self)
+		self._order = 'Lagomorpha'
+	@property
+	def order(self):
+		return self._order
