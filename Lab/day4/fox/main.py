@@ -128,3 +128,17 @@ class Mustela(Mustelidae):
 	@property
 	def gen(self):
 		return self._genus
+
+#----- Wolf -----#
+class Canis(Canidae):
+	def __init__(self):
+		Canidae.__init__(self)
+		self._say = 'arrwoooo'
+		self._genus = 'Canis'
+		self._avg = '12.5 (high) years'
+		self._hab = 'tundra'
+		self._geo = 'polar'
+		self._img = 'http://www.robertwinslowphoto.com/Animals/North-and-South-American/Wolf-Arctic/Arctic-Wolf-BF-09W8C/111249704_xjUNn-L.jpg'
+	@property
+	def gen(self):
+		return self._genus
