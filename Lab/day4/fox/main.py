@@ -120,7 +120,7 @@ class Vulpes(Canidae):
 		self._avg = '16.3 years'
 		self._hab = 'tundra'
 		self._geo = 'polar'
-		self._img = 'http://www.animalhdwallpapers.com/wp-content/uploads/wallpapers/Foxes/Arctic-Fox-in-Snow-Wallpaper.jpg'
+		self._img = 'http://www.terrain.org/columns/25/images/roth_fox.jpg'
 	@property
 	def gen(self):
 		return self._genus
