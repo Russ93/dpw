@@ -142,3 +142,24 @@ class Canis(Canidae):
 	@property
 	def gen(self):
 		return self._genus
+
+#----- Bunny -----#
+class Leporidae(Lagomorpha):
+	def __init__(self):
+		Lagomorpha.__init__(self)
+		self._fam = 'Leporidae'
+	@property
+	def fam(self):
+		return self._fam
+class Lepus(Leporidae):
+	def __init__(self):
+		Leporidae.__init__(self)
+		self._say = 'ntch ntch ntch'
+		self._genus = 'Lepus'
+		self._avg = '3 to 5 years'
+		self._hab = 'tundra'
+		self._geo = 'polar'
+		self._img = 'http://www.waynelynch.ca/arctic_gallery/8-Arctic_Hare_101.jpg'
+	@property
+	def gen(self):
+		return self._genus
