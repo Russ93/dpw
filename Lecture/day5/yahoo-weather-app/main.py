@@ -12,7 +12,7 @@ class MainHandler(webapp2.RequestHandler):
 			zip = self.request.GET['zip'] #takes zip from url and stores it
 			url = 'http://xml.weather.yahoo.com/forecastrss?p=' #url we are going to load the page from
 			req = urllib2.Request(url + zip) # concat zip with url
-			opener = urllib2.build_opener() #magic to load request creates framework to get ur;
+			opener = urllib2.build_opener() #magic to load request creates framework to get url
 			result = opener.open(req) #gets url and puts result in 'result'
 			xmldoc = minidom.parse(result) #parse through string to get XML object
 			content = ''
