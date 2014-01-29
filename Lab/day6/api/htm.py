@@ -64,3 +64,25 @@ class Page():
 	@ul.setter
 	def ul(self, val):
 		self.__ul = val
+#-------------------- Templater --------------------#
+	def tmp(self,arr):
+		tmp = u''
+		for uil in arr:
+			# Creates the list item
+			currentObject = u'''
+			<li>
+				<a href='{uil[homepage]}' target="_blank" class='nomarg'><img class="logo" src="{uil[showLogo]}" /></a>
+				<a href='{uil[URL]}' target='_blank' class='nomarg'><img class='big' src='{uil[showImageStandardBig]}' /></a>
+				<h3>{uil[name]}</h3>
+				<h4>{uil[dealTitle]}</h4>
+				<p>{uil[dealinfo]}</p>
+				<address>{uil[address]}.<br/>{uil[city]}, {uil[state]}</address>
+			</li>'''
+			tmp = tmp + currentObject.format(**locals())
+		# Wraps it in the Unordered List
+		ul = '''
+			<ul>'''+tmp+'''
+			</ul>
+		'''
+		# sets the .__ul 
+		self.ul = ul
