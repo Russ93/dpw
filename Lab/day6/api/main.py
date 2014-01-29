@@ -10,18 +10,7 @@ import json #library for working with xml
 
 class MainHandler(webapp2.RequestHandler):
 	def get(self):
-		page = Page()
-
-		self.response.write(page.head)
-		if self.request.GET:
-			self.response.write(page.nav)
-			model = Model(self.request.GET['zip'])
-			do = model.do
-			page.tmp(do)
-			self.response.write(page.ul)
-		else:
-			self.response.write(page.cta)
-		self.response.write(page.foot)
+		self.response.write('Hello World')
 
 app = webapp2.WSGIApplication([
 	('/', MainHandler)
