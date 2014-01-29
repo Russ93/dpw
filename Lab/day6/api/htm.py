@@ -1,6 +1,22 @@
 import urllib2
 import json
 
+#-------------------------------------------------- Model --------------------------------------------------#
+class Model(object):
+	def __init__(self,zip):
+		self.__key = '82cb2645283a89fe53352968298a7fd61ad8386f5110836008c14e1435faf5b3a8f063a5ce613aa22b528c095b429ee2'
+		self.__url = 'http://api.8coupons.com/v1/getdeals?key='+self.__key+'&zip='+zip+'&mileradius=20&limit=1000&orderby=radius&categoryid=2,6'
+		#url we are going to load the page from
+		self.__req = urllib2.Request(self.__url) # concat zip with url
+		self.__opener = urllib2.build_opener() #magic to load request creates framework to get url
+		self.__result = self.__opener.open(self.__req) #gets url and puts result in 'result'
+		self.__obj = json.load(self.__result)
+
+
+	@property
+	def do(self):
+		return self.__obj
+
 #-------------------------------------------------- Views --------------------------------------------------#
 class Page():
 #-------------------- initializer --------------------#
