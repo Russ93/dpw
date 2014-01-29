@@ -84,6 +84,34 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
+/*------------------------- Navigation -------------------------*/
+nav{
+	top: 0;
+	position: fixed;
+	height: 75px;
+	width: 100%;
+	background: #fff;
+	z-index: 2;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+nav img{
+	float: left;
+	margin: 1.25% 0 0 50px;
+}
+input{
+	width: 25%;
+	padding: 10px;
+	margin: 15px 0 0 2%;
+	border-radius: 5px;
+	border: #ccc solid 2px;
+	border-right: none;
+	background: #fff;
+	clear: both;
+}
+input:focus{
+	outline: 0;
+	border: #076BB6 solid 2px;
+}
 /*------------------------- CTA -------------------------*/
 #cta{
 	width: 50%;
