@@ -1,7 +1,30 @@
 import urllib2
 from xml.dom import minidom
 
-
+class Model(object):
+	def __init__(self):	
+		self.__xmldoc = minidom.parse(open('Music.xml', 'r'))
+		self.__tracks = self.__xmldoc.getElementsByTagName('track')
+		#print self.__tracks
+		self.__tracksArr = []
+		self.__titles = []
+		for t in self.__tracks:
+			track = dict()
+			track['title'] = t.getElementsByTagName('title')[0].firstChild.nodeValue
+			track['artist'] = t.getElementsByTagName('artist')[0].firstChild.nodeValue
+			track['length'] = t.getElementsByTagName('length')[0].firstChild.nodeValue
+			track['year'] = t.getElementsByTagName('year')[0].firstChild.nodeValue
+			track['label'] = t.getElementsByTagName('label')[0].firstChild.nodeValue
+			track['cover'] = t.getElementsByTagName('cover')[0].firstChild.nodeValue
+			self.__tracksArr.append(track)
+			self.__titles.append(track['title'])
+	def do(self, name):
+		for t in self.__tracksArr:
+			if t['title'] == name:
+				return t
+	@property
+	def lis(self):
+		return self.__titles
 class Page(object):
 	def __init__(self):
 		self.__header = '''

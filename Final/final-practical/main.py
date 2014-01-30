@@ -9,7 +9,8 @@ from xml.dom import minidom
 class MainHandler(webapp2.RequestHandler):
     def get(self):
     	page = Page()
-
+    	view = View()
+    	page.nav = model.lis
 
         self.response.write(page.head)
         self.response.write(page.nav)
