@@ -13,6 +13,9 @@ class MainHandler(webapp2.RequestHandler):
 
         self.response.write(page.head)
         self.response.write(page.nav)
+        if self.request.GET:
+        	view.template(model.do(self.request.GET['song']))
+        	self.response.write(view.view)
 
         self.response.write(page.close)
 

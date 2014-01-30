@@ -1,5 +1,7 @@
 import urllib2
 from xml.dom import minidom
+
+
 class Page(object):
 	def __init__(self):
 		self.__header = '''
