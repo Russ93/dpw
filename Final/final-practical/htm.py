@@ -32,7 +32,7 @@ class Page(object):
 <html>
 <head>
 	<title>iTunes Music</title>
-	<style>html{font-family: Helvetica;}nav{float: left;}article img{float: left;}article{float: left; margin-left: 25px;}article ul{float: left;}</style>
+	
 </head>
 <body>
 		'''

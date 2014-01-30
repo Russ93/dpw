@@ -10,6 +10,7 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
     	page = Page()
     	view = View()
+    	model = Model()
     	page.nav = model.lis
 
         self.response.write(page.head)
