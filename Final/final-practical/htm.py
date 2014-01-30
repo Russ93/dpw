@@ -10,6 +10,7 @@ class Model(object):
 		self.__titles = []
 		for t in self.__tracks:
 			track = dict()
+			track['mp3'] = t.getAttribute('file')
 			track['title'] = t.getElementsByTagName('title')[0].firstChild.nodeValue
 			track['artist'] = t.getElementsByTagName('artist')[0].firstChild.nodeValue
 			track['length'] = t.getElementsByTagName('length')[0].firstChild.nodeValue
@@ -89,10 +90,12 @@ class View(object):
 				<li>{obj[artist]}</li>
 				<li>{obj[length]}</li>
 				<li>{obj[year]}</li>
+				<li>
+					<audio controls>
+						<source src='mp3s/{obj[mp3]}' type='audio/mpeg'/>
+					</audio>
+				</li>
 			</ul>
 		</article>'''
-	#		<audio controls>
-	#			<source src='mp3s/{obj[mp3]}' type='audio/mpeg'/>
-	#		</audio>
 		strang = strang.format(**locals())
 		self.__view = strang
