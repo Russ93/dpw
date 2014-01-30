@@ -44,3 +44,30 @@ class Page(object):
 		for i in li:
 			self.__nav = self.__nav + '<li><a href="/?song='+i+'">'+i+'</a></li>'
 		self.__nav = self.__nav + '</ul></nav>'
+
+class View(object):
+	def __init__(self):
+		self.__view = ''
+
+	@property
+	def view(self):
+		return self.__view
+
+	def template(self, obj):
+		print obj
+		strang = '''
+		<article>
+			<img src='covers/{obj[cover]}' />
+			<ul>
+				<li>{obj[title]}</li>
+				<li>{obj[length]}</li>
+				<li>{obj[artist]}</li>
+				<li>{obj[length]}</li>
+				<li>{obj[year]}</li>
+			</ul>
+		</article>'''
+	#		<audio controls>
+	#			<source src='mp3s/{obj[mp3]}' type='audio/mpeg'/>
+	#		</audio>
+		strang = strang.format(**locals())
+		self.__view = strang
